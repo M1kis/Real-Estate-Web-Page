@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inmobiliaria William Rodriguez</title>
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="CSS/style.css">
+     <!-- Google Web Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+    <!-- Page Icon -->
+    <link rel="icon" href="IMG/Icono.ico">
+    <!-- Web icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <!-- Botón flotante de WhatsApp -->
+    <div class="whatsapp-button">
+        <a href="https://api.whatsapp.com/send?phone=3132427584" target="_blank">
+            <i class="fa fa-whatsapp" style="font-size:36px;color:rgb(255, 255, 255)"></i>
+        </a>
+    </div>
+    <!-- Boton de whatsapp -->
+
+    <!-- Video presentacion -->
+
+    <div id="videoOverlay" class="video-overlay">
+        <div id="videoContainer" class="video-container">
+            <video id="video" controls>
+                Tu navegador no soporta video HTML5.
+            </video>
+            <button id="closeBtn" class="close-btn"><i class="fa fa-times"></i></button>
+        </div>
+    </div>
+
+    <!-- Video presentacion -->
+
+    <header>
+        <div class="navbar-container">
+            <div class="navbar-subcontainer">
+                <nav class="navbar">
+                    <div class="logo-bar">
+                        <img src="IMG/logo.png" alt="iwr-logo">
+                        <a href="index.html" class="nav-branding">Inm. William Rodriguez</a>
+                    </div>
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="inmuebles.html" class="nav-link">Inmuebles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#Servicios" class="nav-link">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#SobreNosotros" class="nav-link">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#Contacto" class="nav-link">Contacto</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav-icon">
+                        <div class="nav-filter-icon" style="display: none;">
+                            <a class="nav-icon-filter"><i class="fa fa-filter" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="nav-icon-items">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div class="information-container">
+        <div class="information-subcontainer">
+            <div class="information-section1">
+                <div class="information-section1-items1">
+                    <i class='fas fa-map-marker-alt me-2' style='font-size:16px;color:#33a05e'></i>
+                    <p>Carrera 27 # 13-33 oficina 205, CO</p>
+                </div>
+                <div class="information-section1-items2">
+                    <i class="fa fa-clock-o me-2" style="font-size:16px;color:#33a05e"></i>
+                    <p>Lun - Vie | 9:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+            <div class="information-section2">
+                <div class="information-section2-items1">
+                    <i class='fas fa-phone-alt text-primary me-2' style='font-size:16px;color:#33a05e'></i>
+                    <p>+57 3132427584</p>
+                </div>
+                <div class="information-section2-items2">
+                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href="https://www.facebook.com/people/William-Rodriguez/pfbid02SPYNYcXm8RsQFaECFR8LbUV1AGEKpnYPrsWgHoP8tn285cGbNSWSikLcTdaXnDKLl/"><i class="fab fa-facebook-f" style='font-size:16px;color:#33a05e'></i></a>
+                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href="https://www.tiktok.com/@williamrodrigu731"><i class="fa-brands fa-tiktok" style='font-size:16px;color:#33a05e'></i></a>
+                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i class="fab fa-linkedin-in" style='font-size:16px;color:#33a05e'></i></a>
+                    <a class="btn btn-square btn-link rounded-0" href="https://www.instagram.com/inm.williamrodriguez/"><i class="fab fa-instagram" style='font-size:16px;color:#33a05e'></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filtro de busqueda -->
+    <section id="Inmuebles">
+        <div class="Inmuebles-Container">
+            <div class="Inmuebles-Subcontainer">
+                <div class="search-container">
+                    <div class="search-subcontainer">
+                        <h1>Filtro de busqueda de inmuebles</h1>
+                        <div class="search-form">
+                            <select class="search-select" id="ubicación">
+                                <option value="ubicación-def" style="display: none;">Ubicación</option>
+                                <option value="ubicación-bga">Bucaramanga</option>
+                                <option value="ubicación-flo">Floridablanca</option>
+                                <option value="ubicación-bog">Bogotá</option>
+                            </select>
+                            <select class="search-select" id="tipo_venta">
+                                <option value="sale-def" style="display: none;">Tipo contrato</option>
+                                <option value="sale-venta">Venta</option>
+                                <option value="sale-arriendo">Arriendo</option>
+                            </select>
+                            <select class="search-select" id="tipo_propiedad">
+                                <option value="tipo-def" style="display: none;">Tipo de Inmueble</option>
+                                <option value="tipo-casa">Casa</option>
+                                <option value="tipo-apartamento">Apartamento</option>
+                                <option value="tipo-local">Local</option>
+                            </select>
+                            <select class="search-select" id="habitaciones">
+                                <option value="hab-def" style="display: none;">Habitaciones</option>
+                                <option value="hab-1">1 Habitación</option>
+                                <option value="hab-2">2 Habitaciones</option>
+                                <option value="hab-3">3 Habitaciones</option>
+                                <option value="hab-4">4 Habitaciones</option>
+                            </select>
+                            <select class="search-select" id="precio">
+                                <option value="val-def" style="display: none;">Precio</option>
+                                <option value="val-0-2000000">0 - 2.000.000 COP</option>
+                                <option value="val-2000000-10000000">2.000.000 - 10.000.000 COP</option>
+                                <option value="val-10000000-60000000">10.000.0000 - 60.000.000 COP</option>
+                                <option value="val-60000000-50000000">+ 60.000.000 COP</option>
+                            </select>
+                            <button class="search-button" id="applyFiltersButton">Buscar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Filtro de busqueda -->
+
+    <section id="Destacados">
+        <div class="titulo-container">
+            <h2 class="subtitulo">Destacados</h2>
+            <h1 class="titulo-principal">Nuestras recomendaciones</h1>
+        </div>
+        <div class="Inmuebles-Destacados-Card-Container">
+            <div class="Inmuebles-Destacados-Card-Subcontainer">
+                <div class="destacados-card">
+                    <img src="./IMG/Edificios/Inm-Ed-01.png" alt="">
+                    <div class="destacados-card-informacion">
+                        <h2>$1'750.000 COP</h2>
+                        <h4><i class="fa fa-bed" aria-hidden="true"></i> 1 Hab - <i class="fa fa-bath" aria-hidden="true"></i> 1 Baño - <i class="fa-solid fa-ruler"></i> 30 m2</h4>
+                        <p>Apartamento en arriendo, Bucaramanga.</p>
+                        <h3>Carrera 27 # 13-33, Apto 205.</h3>
+                        <hr>
+                        <p>Por Inmobiliaria William Rodriguez</p>
+                        <a href="Propiedades-ED/Propiedad-01-ED.html">Ver más</a>
+                    </div>
+                </div>
+                <div class="destacados-card">
+                    <img src="./IMG/Edificios/Inm-Ed-02.png" alt="">
+                    <div class="destacados-card-informacion">
+                        <h2>$227.000.000 COP</h2>
+                        <h4><i class="fa fa-bed" aria-hidden="true"></i> 2 Hab - <i class="fa fa-bath" aria-hidden="true"></i> 1 Baño - <i class="fa-solid fa-ruler"></i> 40 m2</h4>
+                        <p>Apartamento en venta, Bogotá.</p>
+                        <h3>Calle 176 # 54-15, Apto 514.</h3>
+                        <hr>
+                        <p>Por Inmobiliaria William Rodriguez</p>
+                        <a href="Propiedades-ED/Propiedad-02-ED.html">Ver más</a>
+                    </div>
+                </div>
+                <div class="destacados-card">
+                    <img src="./IMG/Edificios/Inm-Ed-03.png" alt="">
+                    <div class="destacados-card-informacion">
+                        <h2>$345.000.000 COP</h2>
+                        <h4><i class="fa fa-bed" aria-hidden="true"></i> 2 Hab - <i class="fa fa-bath" aria-hidden="true"></i> 1 Baño - <i class="fa-solid fa-ruler"></i> 40 m2</h4>
+                        <p>Apartamento en venta, Bucaramanga.</p>
+                        <h3>Carrera 27a # 48-62, Piso 10.</h3>
+                        <hr>
+                        <p>Por Inmobiliaria William Rodriguez</p>
+                        <a href="./Propiedades-ED/Propiedad-03-ED .html">Ver más</a>
+                    </div>
+                </div>
+                <div class="destacados-card">
+                    <img src="./IMG/Edificios/Inm-Ed-08.png" alt="">
+                    <div class="destacados-card-informacion">
+                        <h2>$1'350.000 COP</h2>
+                        <h4><i class="fa fa-bed" aria-hidden="true"></i> 2 Hab - <i class="fa fa-bath" aria-hidden="true"></i> 2 Baños - <i class="fa-solid fa-ruler"></i> 60 m2</h4>
+                        <p>Apartamento en arriendo, Floridablanca.</p>
+                        <h3>Diagonal 19 #153b-10.</h3>
+                        <hr>
+                        <p>Por Inmobiliaria William Rodriguez</p>
+                        <a href="#">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="titulo-container">
+            <a href="inmuebles.html"><button class="contactenos-btn">Ver todas las propiedades</button></a>
+        </div>
+    </section>
+
+    <section id="SobreNosotros">
+        <div class="sobre-nosotros-container">
+            <div class="sobre-nosotros-imagen">
+                <img src="./IMG/about.jpg" alt="Equipo de bienes raíces">
+            </div>
+            <div class="sobre-nosotros-info">
+                <h2>Sobre nosotros</h2>
+                <h3>5+ Años de Experiencia en el negocio de bienes raices</h3>
+                <p>Construyendo Sueños y Creando Hogares: Más de 5 Años Comprometidos con la Excelencia en el Negocio de Bienes Raíces</p>
+                <ul>
+                    <li>Excelencia sin compromiso</li>
+                    <li>Pasión por los éxitos</li>
+                    <li>Conexiones que importan</li>
+                </ul>
+                <a href="https://api.whatsapp.com/send?phone=3132427584" target="_blank"><button class="contactenos-btn">Contáctenos</button></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="Servicios">
+        <div class="titulo-container">
+            <h2 class="subtitulo">Servicios</h2>
+            <h1 class="titulo-principal">Tenemos lo que necesitas</h1>
+        </div>
+        <div class="Servicios-Card-Container">
+            <div class="Servicios-Card-Subcontainer">
+                <div class="servicios-card">
+                    <img src="./IMG/Servicio-Arriendo.jpg" alt="">
+                    <div class="servicios-card-informacion">
+                        <h2>Arriendos</h2>
+                        <p>Gestionamos propiedades en alquiler, ya sea para uso residencial o comercial.</p>
+                        <p>Brindamos a nuestros clientes seguridad, confianza y apoyo, fundamentados en sólidos principios empresariales que garantizan su tranquilidad y satisfacción.</p>
+                    </div>
+                </div>
+                <div class="servicios-card">
+                    <img src="./IMG/Servicio-Venta.png" alt="">
+                    <div class="servicios-card-informacion">
+                        <h2>Ventas</h2>
+                        <p>Ofrecemos servicios de reparaciones para nuestras propiedades.</p>
+                        <p>Garantizamos a nuestros clientes seguridad, confianza y respaldo, basados en principios empresariales sólidos que aseguran su tranquilidad y satisfacción en cada reparación.</p>
+                    </div>
+                </div>
+                <div class="servicios-card">
+                    <img src="./IMG/Servicio-Reparacion.jpg" alt="">
+                    <div class="servicios-card-informacion">
+                        <h2>Reparaciones</h2>
+                        <p>Puede adquirir o vender propiedades de manera segura y sin preocupaciones.</p>
+                        <p>Nuestro compromiso con la seguridad y el respaldo garantiza que encontrará la propiedad adecuada gracias a nuestro equipo de profesionales altamente capacitados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="Contacto">
+        <div class="titulo-container">
+            <h2 class="subtitulo">Contacto</h2>
+            <h1 class="titulo-principal">Estamos disponible</h1>
+        </div>
+        <div class="contact-container">
+            <div class="contact-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d989.730271237799!2d-73.12084073037694!3d7.1351243302737295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMDgnMDYuNCJOIDczwrAwNycxMi43Ilc!5e0!3m2!1ses-419!2sco!4v1701622385614!5m2!1ses-419!2sco" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info-wrapper">
+                    <h3>Información de contacto</h3>
+                    <div class="contact-info">
+                        <p><i class="fa fa-map-marker-alt"></i> Carrera 27 # 13-33 oficina 205</p>
+                        <p><i class="fa fa-envelope"></i> Inmobiliariawilliamrodriguez@gmail.com</p>
+                        <p><i class="fa fa-phone"></i> +57 301-7092201</p>
+                        <p><i class="fa fa-clock"></i> Lun - Vie | 9:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+                <div class="partners-wrapper">
+                    <h3>Entidades Aliadas</h3>
+                    <div class="partners">
+                        <div class="partner-item">
+                            <img src="./IMG/fianzacredito_ico.jpg" alt="FianzaCredito">
+                            <a href="path/to/fianzacredito.pdf" download="Formulario_FianzaCredito.pdf">Descargar formulario</a>
+                        </div>
+                        <div class="partner-item">
+                            <img src="./IMG/ellibertador_ico.jpg" alt="El Libertador">
+                            <a href="path/to/libertador.pdf" download="Formulario_El_Libertador.pdf">Descargar formulario</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><p>Carrera 27 # 13-33 oficina 205</p></li>
+                        <li><p>Bucaramanga, Santander.</p></li>
+                        <li><p>+57 313-2427584</p></li>
+                        <li><p>Inmobiliariawilliamrodriguez@gmail.com</p></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#Inmuebles"><i class="fa fa-angle-right" aria-hidden="true"></i> Inmuebles</a></li>
+                        <li><a href="#Servicios"><i class="fa fa-angle-right" aria-hidden="true"></i> Servicios</a></li>
+                        <li><a href="#SobreNosotros"><i class="fa fa-angle-right" aria-hidden="true"></i> Sobre nosotros</a></li>
+                        <li><a href="#Contacto"><i class="fa fa-angle-right" aria-hidden="true"></i> Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Entidades Aliadas</h4>
+                    <ul>
+                        <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i> FianzaCredito S.A</a></li>
+                        <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i> El libertador</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-row2">
+                <hr>
+                <div class="footer-row2-container">
+                    <div class="footer-row2-items1">
+                        <h4>© <a href="">Inmobiliaria William Rodriguez</a>, Todos los derechos reservados.</h4>
+                    </div>
+                    <div class="footer-row2-items2">
+                        <h4>Designed By Miguel Rueda</h4>
+                        <h4>Distributed By: MikisGeekDev</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="JS/scripts.js"></script>
+    <script>
+        const videoOverlay = document.getElementById('videoOverlay');
+        const closeBtn = document.getElementById('closeBtn');
+        const video = document.querySelector('#videoContainer video');
+
+        function showVideoOverlay() {
+            video.src = './MP4/video.mp4'; // Establecer la ruta del video aquí
+            video.currentTime = 0; // Reiniciar el video al principio
+            video.play(); // Iniciar la reproducción del video
+            videoOverlay.style.display = 'flex'; // Mostrar el overlay
+        };
+
+        function hideVideoOverlay() {
+            video.pause(); // Pausar el video
+            video.currentTime = 0; // Reiniciar el video al principio
+            videoOverlay.style.display = 'none'; // Ocultar el overlay
+        };
+
+        function showOrHideVideo() {
+            if (sessionStorage.getItem('videoShown') === 'true') {
+                hideVideoOverlay();
+            } else {
+                showVideoOverlay();
+                sessionStorage.setItem('videoShown', 'true');
+            }
+        };
+
+        closeBtn.addEventListener('click', hideVideoOverlay);
+
+        video.addEventListener('ended', hideVideoOverlay);
+
+        window.onload = function() {
+            if (sessionStorage.getItem('videoShown') !== 'true') {
+                showOrHideVideo();
+                sessionStorage.setItem('videoShown', 'true');
+            }
+        };
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            localStorage.setItem('filter_apply', false);
+
+            function applyFilters() {
+                
+                localStorage.setItem('filter_apply', true);
+
+                const ubicación = document.getElementById('ubicación').value;
+                const tipo_venta = document.getElementById('tipo_venta').value;
+                const tipo_propiedad = document.getElementById('tipo_propiedad').value;
+                const habitaciones = document.getElementById('habitaciones').value;
+                const precio = document.getElementById('precio').value;
+                
+                let url = 'inmuebles.html?';
+                if (ubicación) url += `ubicación=${encodeURIComponent(ubicación)}&`;
+                if (tipo_venta) url += `tipo_venta=${encodeURIComponent(tipo_venta)}&`;
+                if (tipo_propiedad) url += `tipo_propiedad=${encodeURIComponent(tipo_propiedad)}&`;
+                if (habitaciones) url += `habitaciones=${encodeURIComponent(habitaciones)}&`;
+                if (precio) url += `precio=${encodeURIComponent(precio)}&`;
+
+                url = url.replace(/&$/, '');
+
+                window.location.href = url;
+            }
+
+            // Asignar el evento onclick al botón
+            document.getElementById('applyFiltersButton').onclick = applyFilters;
+        });
+    </script>
+</body>
+</html>

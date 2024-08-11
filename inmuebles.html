@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inmobiliaria William Rodriguez</title>
+    <!-- CSS Styles -->
+    <link rel="stylesheet" href="CSS/style.css">
+     <!-- Google Web Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+    <!-- Page Icon -->
+    <link rel="icon" href="IMG/Icono.ico">
+    <!-- Web icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <!-- Botón flotante de WhatsApp -->
+    <div class="whatsapp-button">
+        <a href="https://api.whatsapp.com/send?phone=3132427584" target="_blank">
+            <i class="fa fa-whatsapp" style="font-size:36px;color:rgb(255, 255, 255)"></i>
+        </a>
+    </div>
+    <!-- Boton de whatsapp -->
+
+    <header>
+        <div class="navbar-container">
+            <div class="navbar-subcontainer">
+                <nav class="navbar">
+                    <div class="logo-bar">
+                        <img src="IMG/logo.png" alt="iwr-logo">
+                        <a href="index.html" class="nav-branding">Inm. William Rodriguez</a>
+                    </div>
+
+                    <!-- Nav-Menu filter Movil Inicio -->
+                    <div class="nav-menu-filter">
+                        <div class="nav-menu-filter-items-container">
+                            <div class="nav-menu-filter-items-subcontainer">
+                                <select class="filter-select" data-type="location-type-mov">
+                                    <option value="ubicación-def-mov" style="display: none;">Ubicación</option>
+                                    <option value="ubicación-bga-mov">Bucaramanga</option>
+                                    <option value="ubicación-flo-mov">Floridablanca</option>
+                                    <option value="ubicación-bog-mov">Bogotá</option>
+                                </select>
+                                <select class="filter-select" data-type="sale-type-mov">
+                                    <option value="sale-def-mov" style="display: none;">Tipo contrato</option>
+                                    <option value="sale-venta-mov">Venta</option>
+                                    <option value="sale-arriendo-mov">Arriendo</option>
+                                </select>
+                                <select class="filter-select" data-type="data-type-mov">
+                                    <option value="tipo-def-mov" style="display: none;">Tipo de Inmueble</option>
+                                    <option value="tipo-casa-mov">Casa</option>
+                                    <option value="tipo-apartamento-mov">Apartamento</option>
+                                    <option value="tipo-local-mov">Local</option>
+                                </select>
+                                <select class="filter-select" data-type="rooms-type-mov">
+                                    <option value="hab-def-mov" style="display: none;">Habitaciones</option>
+                                    <option value="hab-1-mov">1 Habitación</option>
+                                    <option value="hab-2-mov">2 Habitaciones</option>
+                                    <option value="hab-3-mov">3 Habitaciones</option>
+                                    <option value="hab-4-mov">4 Habitaciones</option>
+                                </select>
+                                <select class="filter-select" data-type="price-type-mov">
+                                    <option value="val-def-mov" style="display: none;">Precio</option>
+                                    <option value="val-0-2000000-mov">0 - 2.000.000 COP</option>
+                                    <option value="val-2000000-10000000-mov">2.000.000 - 10.000.000 COP</option>
+                                    <option value="val-10000000-60000000-mov">10.000.0000 - 60.000.000 COP</option>
+                                    <option value="val-60000000-50000000-mov">+ 60.000.000 COP</option>
+                                </select>
+                                <div class="filter-buttons">
+                                    <button style="background-color: #10c45b; color: white;" id="apply-filters-mov">Aplicar filtros</button>
+                                    <button id="clear-filters-mov">Limpiar filtros</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Nav-Menu filter Movil Final -->
+
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="index.html" class="nav-link">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Inmuebles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html#Servicios" class="nav-link">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html#SobreNosotros" class="nav-link">Sobre nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="index.html#Contacto" class="nav-link">Contacto</a>
+                        </li>
+                    </ul>
+
+                    <div class="nav-icon">
+                        <div class="nav-filter-icon">
+                            <a class="nav-icon-filter"><i class="fa fa-filter" aria-hidden="true"></i></a>
+                        </div>
+                        <div class="nav-icon-items">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Nav-Menu filter Escritorio Inicio -->
+                <div class="Navbar-filter-container">
+                    <div class="Navbar-filter-subcontainer">
+                        <select class="filter-select" data-type="location-type">
+                            <option value="ubicación-def" style="display: none;">Ubicación</option>
+                            <option value="ubicación-bga">Bucaramanga</option>
+                            <option value="ubicación-flo">Floridablanca</option>
+                            <option value="ubicación-bog">Bogotá</option>
+                        </select>
+                        <select class="filter-select" data-type="sale-type">
+                            <option value="sale-def" style="display: none;">Tipo contrato</option>
+                            <option value="sale-venta">Venta</option>
+                            <option value="sale-arriendo">Arriendo</option>
+                        </select>
+                        <select class="filter-select" data-type="data-type">
+                            <option value="tipo-def" style="display: none;">Tipo de Inmueble</option>
+                            <option value="tipo-casa">Casa</option>
+                            <option value="tipo-apartamento">Apartamento</option>
+                            <option value="tipo-local">Local</option>
+                        </select>
+                        <select class="filter-select" data-type="rooms-type">
+                            <option value="hab-def" style="display: none;">Habitaciones</option>
+                            <option value="hab-1">1 Habitación</option>
+                            <option value="hab-2">2 Habitaciones</option>
+                            <option value="hab-3">3 Habitaciones</option>
+                            <option value="hab-4">4 Habitaciones</option>
+                        </select>
+                        <select class="filter-select" data-type="price-type">
+                            <option value="val-def" style="display: none;">Precio</option>
+                            <option value="val-0-2000000">0 - 2.000.000 COP</option>
+                            <option value="val-2000000-10000000">2.000.000 - 10.000.000 COP</option>
+                            <option value="val-10000000-60000000">10.000.0000 - 60.000.000 COP</option>
+                            <option value="val-60000000-50000000">+ 60.000.000 COP</option>
+                        </select>
+                        <button id="apply-filters" class="filter-clear">Aplicar filtros</button>
+                        <button id="clear-filters" class="filter-clear">Limpiar filtros</button>
+                    </div>
+                    <div class="selected-filters" id="selected-filters"></div>
+                </div>
+                <!-- Nav-Menu filter Escritorio Final -->
+            </div>
+        </div>
+    </header>
+    
+    <!-- Imuebles card Inicio -->
+    <section id="Inmuebles-Card">
+        <div class="Inmuebles-Card-Container">
+            <div class="Inmuebles-Card-Subcontainer">
+                <div id="no-results" class="no-results">
+                    <h1>Sin resultados :(</h1>
+                    <p>Prueba con una combinación diferente</p>
+                </div>
+                <!-- Propiedad: Codigo: AP0101, Ubicacion: Bucaramanga, Tipo: Arriendo, Tipo inmueble: Apartamento, Habitaciones: 1, Precio: 0 - 2.000.000 COP -->
+                <div class="card" ubicacion-index="ubicación-bga" location-type="ubicación-bga" location-type-mov="ubicación-bga-mov" venta-index="sale-arriendo" sale-type="sale-arriendo" sale-type-mov="sale-arriendo-mov" propiedad-index="tipo-apartamento" data-type="tipo-apartamento" data-type-mov="tipo-apartamento-mov" habitaciones-index="hab-1" room-type="hab-1" room-type-mov="hab-1-mov" precio-index="val-0-2000000" price-type="val-0-2000000" price-type-mov="val-0-2000000-mov">
+                    <img src="./IMG/Edificios/Inm-Ed-01.png" alt="">
+                    <div class="card-informacion">
+                        <h2>$1'750.000 COP</h2>
+                        <h4><i class="fa fa-bed" aria-hidden="true"></i> 1 Hab - <i class="fa fa-bath" aria-hidden="true"></i> 1 Baño - <i class="fa-solid fa-ruler"></i> 30 m2</h4>
+                        <p>Apartamento en arriendo, Bucaramanga.</p>
+                        <h3>Carrera 27 # 13-33, Apto 205.</h3>
+                        <hr>
+                        <p>Por Inmobiliaria William Rodriguez</p>
+                        <a href="Propiedades-ED/Propiedad-01-ED.html">Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Propiedad: Codigo: AP0102, Ubicacion: Bogotá, Tipo: Venta, Tipo inmueble: Apartamento, Habitaciones: 2, Precio: + 60.000.000 COP -->
+                <div class="card" ubicacion-index="ubicación-bog" location-type="ubicación-bog" location-type-mov="ubicación-bog-mov" venta-index="sale-venta" sale-type="sale-venta" sale-type-mov="sale-venta-mov" data-type="tipo-apartamento" data-type-mov="tipo-apartamento-mov" propiedad-index="tipo-apartamento" habitaciones-index="hab-2" room-type="hab-2" room-type-mov="hab-2-mov" precio-index="val-60000000-50000000" price-type="val-60000000-50000000" price-type-mov="val-60000000-50000000-mov">
+                    <img src="./IMG/Edificios/Inm-Ed-02.png" alt="">
+                    <div class="card-informacion">
+                        <h2>$227.000.000 COP</h2>
+                        <h4><i class="fa fa-bed" aria-hidden="true"></i> 2 Hab - <i class="fa fa-bath" aria-hidden="true"></i> 1 Baño - <i class="fa-solid fa-ruler"></i> 40 m2</h4>
+                        <p>Apartamento en venta, Bogotá.</p>
+                        <h3>Calle 176 # 54-15, Apto 514.</h3>
+                        <hr>
+                        <p>Por Inmobiliaria William Rodriguez</p>
+                        <a href="Propiedades-ED/Propiedad-02-ED.html">Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Propiedad: Codigo: AP0103, Ubicacion: Bucaramanga, Tipo: Venta, Tipo inmueble: Apartamento, Habitaciones: 2, Precio: + 60.000.000 COP -->
+                <div class="card" ubicacion-index="ubicación-bga" location-type="ubicación-bga" location-type-mov="ubicación-bga-mov" venta-index="sale-venta" sale-type="sale-venta" sale-type-mov="sale-venta-mov" propiedad-index="tipo-apartamento" data-type="tipo-apartamento" data-type-mov="tipo-apartamento-mov" habitaciones-index="hab-2" room-type="hab-2" room-type-mov="hab-2-mov" precio-index="val-60000000-50000000" price-type="val-60000000-50000000" price-type-mov="val-60000000-50000000-mov">
+                    <img src="./IMG/Edificios/Inm-Ed-03.png" alt="">
+                    <div class="card-informacion">
+                        <h2>$345.000.000 COP</h2>
+                        <h4><i class="fa fa-bed" aria-hidden="true"></i> 2 Hab - <i class="fa fa-bath" aria-hidden="true"></i> 1 Baño - <i class="fa-solid fa-ruler"></i> 40 m2</h4>
+                        <p>Apartamento en venta, Bucaramanga.</p>
+                        <h3>Carrera 27a # 48-62, Piso 10.</h3>
+                        <hr>
+                        <p>Por Inmobiliaria William Rodriguez</p>
+                        <a href="./Propiedades-ED/Propiedad-03-ED .html">Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Propiedad: Codigo: AP0104, Ubicacion: Bucaramanga, Tipo: Arriendo, Tipo inmueble: Apartamento, Habitaciones: 1, Precio: 0 - 2.000.000 COP -->
+                <div class="card" ubicacion-index="ubicación-bga" location-type="ubicación-bga" location-type-mov="ubicación-bga-mov" venta-index="sale-arriendo" sale-type="sale-arriendo" sale-type-mov="sale-arriendo-mov" propiedad-index="tipo-apartamento" data-type="tipo-apartamento" data-type-mov="tipo-apartamento-mov" habitaciones-index="hab-1" room-type="hab-1" room-type-mov="hab-1-mov" precio-index="val-0-2000000" price-type="val-0-2000000" price-type-mov="val-0-2000000-mov">
+                    <img src="./IMG/Edificios/Inm-Ed-04.png" alt="">
+                    <div class="card-informacion">
+                        <h2>$900.000 COP</h2>
+                        <h4><i class="fa fa-bed" aria-hidden="true"></i> 1 Hab - <i class="fa fa-bath" aria-hidden="true"></i> 1 Baño - <i class="fa-solid fa-ruler"></i> 34 m2</h4>
+                        <p>Aparta-estudio en arriendo, Bucaramanga.</p>
+                        <h3>Calle 10 # 21-39, Apto 603.</h3>
+                        <hr>
+                        <p>Por Inmobiliaria William Rodriguez</p>
+                        <a href="./Propiedades-ED/Propiedad-04-ED.html">Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Propiedad: Codigo: AP0105, Ubicacion: Bucaramanga, Tipo: Arriendo, Tipo inmueble: Apartamento, Habitaciones: 2, Precio: 0 - 2.000.000 COP -->
+                <div class="card" ubicacion-index="ubicación-bga" location-type="ubicación-bga" location-type-mov="ubicación-bga-mov" venta-index="sale-arriendo" sale-type="sale-arriendo" sale-type-mov="sale-arriendo-mov" propiedad-index="tipo-apartamento" data-type="tipo-apartamento" data-type-mov="tipo-apartamento-mov" habitaciones-index="hab-2" room-type="hab-2" room-type-mov="hab-2-mov" precio-index="val-0-2000000" price-type="val-0-2000000" price-type-mov="val-0-2000000-mov">
+                    <img src="./IMG/Edificios/Inm-Ed-05.png" alt="">
+                    <div class="card-informacion">
+                        <h2>$980.000 COP</h2>
+                        <h4><i class="fa fa-bed" aria-hidden="true"></i> 2 Hab - <i class="fa fa-bath" aria-hidden="true"></i> 2 Baños - <i class="fa-solid fa-ruler"></i> 36 m2</h4>
+                        <p>Apartamento en arriendo, Bucaramanga.</p>
+                        <h3>Carrera 29 # 11-49, Apto 402.</h3>
+                        <hr>
+                        <p>Por Inmobiliaria William Rodriguez</p>
+                        <a href="./Propiedades-ED/Propiedad-05-ED.html">Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Propiedad: Codigo: AP0106, Ubicacion: Bucaramanga, Tipo: Arriendo, Tipo inmueble: Apartamento, Habitaciones: 3, Precio: 0 - 2.000.000 COP -->
+                <div class="card" ubicacion-index="ubicación-bga" location-type="ubicación-bga" location-type-mov="ubicación-bga-mov" venta-index="sale-arriendo" sale-type="sale-arriendo" sale-type-mov="sale-arriendo-mov" propiedad-index="tipo-apartamento" data-type="tipo-apartamento" data-type-mov="tipo-apartamento-mov" habitaciones-index="hab-3" room-type="hab-3" room-type-mov="hab-3-mov" precio-index="val-0-2000000" price-type="val-0-2000000" price-type-mov="val-0-2000000-mov">
+                    <img src="./IMG/Edificios/Inm-Ed-06.png" alt="">
+                    <div class="card-informacion">
+                        <h2>$850.000 COP</h2>
+                        <h4><i class="fa fa-bed" aria-hidden="true"></i> 3 Hab - <i class="fa fa-bath" aria-hidden="true"></i> 2 Baños - <i class="fa-solid fa-ruler"></i> 54 m2</h4>
+                        <p>Apartamento en arriendo, Bucaramanga.</p>
+                        <h3>Carrera 11C # 11-06, Apto 601.</h3>
+                        <hr>
+                        <p>Por Inmobiliaria William Rodriguez</p>
+                        <a href="./Propiedades-ED/Propiedad-06-ED.html">Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Propiedad: Codigo: AP0107, Ubicacion: Bucaramanga, Tipo: Arriendo, Tipo inmueble: Apartamento, Habitaciones: 2, Precio: 0 - 2.000.000 COP -->
+                <div class="card" ubicacion-index="ubicación-bga" location-type="ubicación-bga" location-type-mov="ubicación-bga-mov" venta-index="sale-arriendo" sale-type="sale-arriendo" sale-type-mov="sale-arriendo-mov" propiedad-index="tipo-apartamento" data-type="tipo-apartamento" data-type-mov="tipo-apartamento-mov" habitaciones-index="hab-2" room-type="hab-2" room-type-mov="hab-2-mov" precio-index="val-0-2000000" price-type="val-0-2000000" price-type-mov="val-0-2000000-mov">
+                    <img src="./IMG/Edificios/Inm-Ed-07.png" alt="">
+                    <div class="card-informacion">
+                        <h2>$1'050.000 COP</h2>
+                        <h4><i class="fa fa-bed" aria-hidden="true"></i> 2 Hab - <i class="fa fa-bath" aria-hidden="true"></i> 1 Baño - <i class="fa-solid fa-ruler"></i> 58 m2</h4>
+                        <p>Apartamento en arriendo, Bucaramanga.</p>
+                        <h3>Calle 15 # 24-41, Piso 2.</h3>
+                        <hr>
+                        <p>Por Inmobiliaria William Rodriguez</p>
+                        <a href="./Propiedades-ED/Propiedad-07-ED.html">Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Propiedad: Codigo: CS0101, Ubicacion: Bucaramanga, Tipo: Arriendo, Tipo inmueble: Casa, Habitaciones: 4, Precio: 2.000.000 - 10.000.000 COP -->
+                <div class="card" ubicacion-index="ubicación-bga" location-type="ubicación-bga" location-type-mov="ubicación-bga-mov" venta-index="sale-arriendo" sale-type="sale-arriendo"  propiedad-index="tipo-casa" data-type="tipo-casa" data-type-mov="tipo-casa-mov" habitaciones-index="hab-4" room-type="hab-4" room-type-mov="hab-4-mov" precio-index="val-2000000-10000000" price-type="val-2000000-10000000" price-type-mov="val-2000000-10000000-mov">
+                    <img src="./IMG/Casas/Inm-Cs-01.png" alt="">
+                    <div class="card-informacion">
+                        <h2>$2'300.000 COP</h2>
+                        <h4><i class="fa fa-bed" aria-hidden="true"></i> 4 Hab - <i class="fa fa-bath" aria-hidden="true"></i> 3 Baños - <i class="fa-solid fa-ruler"></i> 120 m2</h4>
+                        <p>Casa en arriendo, Bucaramanga.</p>
+                        <h3>Calle 20 # 32-75.</h3>
+                        <hr>
+                        <p>Por Inmobiliaria William Rodriguez</p>
+                        <a href="./Propiedades-CS/Propiedad-01-CS.html">Ver más</a>
+                    </div>
+                </div>
+
+                <!-- Propiedad: Codigo: AP0108, Ubicacion: Floridablanca, Tipo: Arriendo, Tipo inmueble: Apartamento, Habitaciones: 2, Precio: 0 - 2.000.000 COP -->
+                <div class="card" ubicacion-index="ubicación-bga" location-type="ubicación-flo" location-type-mov="ubicación-flo-mov" venta-index="sale-arriendo" sale-type="sale-arriendo" sale-type-mov="sale-arriendo-mov" propiedad-index="tipo-apartamento" data-type="tipo-apartamento" data-type-mov="tipo-apartamento-mov" habitaciones-index="hab-2" room-type="hab-2" room-type-mov="hab-2-mov" precio-index="val-0-2000000" price-type="val-0-2000000" price-type-mov="val-0-2000000-mov">
+                    <img src="./IMG/Edificios/Inm-Ed-08.png" alt="">
+                    <div class="card-informacion">
+                        <h2>$1'350.000 COP</h2>
+                        <h4><i class="fa fa-bed" aria-hidden="true"></i> 2 Hab - <i class="fa fa-bath" aria-hidden="true"></i> 2 Baños - <i class="fa-solid fa-ruler"></i> 60 m2</h4>
+                        <p>Apartamento en arriendo, Floridablanca.</p>
+                        <h3>Diagonal 19 #153b-10.</h3>
+                        <hr>
+                        <p>Por Inmobiliaria William Rodriguez</p>
+                        <a href="#">Ver más</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Imuebles card Final -->
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>Información</h4>
+                    <ul>
+                        <li><p>Carrera 27 # 13-33 oficina 205</p></li>
+                        <li><p>Bucaramanga, Santander.</p></li>
+                        <li><p>+57 313-2427584</p></li>
+                        <li><p>Inmobiliariawilliamrodriguez@gmail.com</p></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Enlaces</h4>
+                    <ul>
+                        <li><a href="#Inmuebles"><i class="fa fa-angle-right" aria-hidden="true"></i> Inmuebles</a></li>
+                        <li><a href="#Servicios"><i class="fa fa-angle-right" aria-hidden="true"></i> Servicios</a></li>
+                        <li><a href="#SobreNosotros"><i class="fa fa-angle-right" aria-hidden="true"></i> Sobre nosotros</a></li>
+                        <li><a href="#Contacto"><i class="fa fa-angle-right" aria-hidden="true"></i> Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Entidades Aliadas</h4>
+                    <ul>
+                        <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i> FianzaCredito S.A</a></li>
+                        <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i> El libertador</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-row2">
+                <hr>
+                <div class="footer-row2-container">
+                    <div class="footer-row2-items1">
+                        <h4>© <a href="">Inmobiliaria William Rodriguez</a>, Todos los derechos reservados.</h4>
+                    </div>
+                    <div class="footer-row2-items2">
+                        <h4>Designed By Miguel Rueda</h4>
+                        <h4>Distributed By: MikisGeekDev</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="JS/scripts.js"></script>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+        const applyFiltersBtn = document.getElementById('apply-filters');
+        const clearFiltersBtn = document.getElementById('clear-filters');
+        const movapplyFiltersBtn = document.getElementById('apply-filters-mov');
+        const movclearFiltersBtn = document.getElementById('clear-filters-mov');
+        const cards = document.querySelectorAll('.card');
+
+        function applyFilters() {
+
+            const location = document.querySelector('select[data-type="location-type"]').value;
+            const saleType = document.querySelector('select[data-type="sale-type"]').value;
+            const dataType = document.querySelector('select[data-type="data-type"]').value;
+            const roomsType = document.querySelector('select[data-type="rooms-type"]').value;
+            const priceType = document.querySelector('select[data-type="price-type"]').value;
+
+            cards.forEach(card => {
+                const cardLocation = card.getAttribute('location-type');
+                const cardSaleType = card.getAttribute('sale-type');
+                const cardDataType = card.getAttribute('data-type');
+                const cardRoomsType = card.getAttribute('room-type');
+                const cardPriceType = card.getAttribute('price-type');
+
+                const matches = 
+                                (location === 'ubicación-def' || cardLocation === location) &&
+                                (saleType === 'sale-def' || cardSaleType === saleType) &&
+                                (dataType === 'tipo-def' || cardDataType === dataType) &&
+                                (roomsType === 'hab-def' || cardRoomsType === roomsType) &&
+                                (priceType === 'val-def' || cardPriceType === priceType);
+
+                card.style.display = matches ? 'flex' : 'none';
+            });
+        }
+
+        // Función para aplicar filtros moviles
+        function applyFiltersMov() {
+
+            const location_mov = document.querySelector('select[data-type="location-type-mov"]').value;
+            const saleType_mov = document.querySelector('select[data-type="sale-type-mov"]').value;
+            const dataType_mov = document.querySelector('select[data-type="data-type-mov"]').value;
+            const roomsType_mov = document.querySelector('select[data-type="rooms-type-mov"]').value;
+            const priceType_mov = document.querySelector('select[data-type="price-type-mov"]').value;
+
+            cards.forEach(card => {
+                const cardLocation_mov = card.getAttribute('location-type-mov');
+                const cardSaleType_mov = card.getAttribute('sale-type-mov');
+                const cardDataType_mov = card.getAttribute('data-type-mov');
+                const cardRoomsType_mov = card.getAttribute('room-type-mov');
+                const cardPriceType_mov = card.getAttribute('price-type-mov');
+
+                const matches_mov = 
+                                (location_mov === 'ubicación-def-mov' || cardLocation_mov === location_mov) &&
+                                (saleType_mov === 'sale-def-mov' || cardSaleType_mov === saleType_mov) &&
+                                (dataType_mov === 'tipo-def-mov' || cardDataType_mov === dataType_mov) &&
+                                (roomsType_mov === 'hab-def-mov' || cardRoomsType_mov === roomsType_mov) &&
+                                (priceType_mov === 'val-def-mov' || cardPriceType_mov === priceType_mov);
+                
+                card.style.display = matches_mov ? 'flex' : 'none';
+            });
+        }
+
+        // Función para limpiar filtros
+        function clearFilters() {
+
+            document.querySelector('select[data-type="location-type"]').value = 'ubicación-def';
+            document.querySelector('select[data-type="sale-type"]').value = 'sale-def';
+            document.querySelector('select[data-type="data-type"]').value = 'tipo-def';
+            document.querySelector('select[data-type="rooms-type"]').value = 'hab-def';
+            document.querySelector('select[data-type="price-type"]').value = 'val-def';
+            
+            cards.forEach(card => {
+                card.style.display = 'flex';
+            });
+        }
+
+        function clearFiltersMov() {
+
+            document.querySelector('select[data-type="location-type-mov"]').value = 'ubicación-def-mov';
+            document.querySelector('select[data-type="sale-type-mov"]').value = 'sale-def-mov';
+            document.querySelector('select[data-type="data-type-mov"]').value = 'tipo-def-mov';
+            document.querySelector('select[data-type="rooms-type-mov"]').value = 'hab-def-mov';
+            document.querySelector('select[data-type="price-type-mov"]').value = 'val-def-mov';
+            
+            cards.forEach(card => {
+                card.style.display = 'flex';
+            });
+        }
+
+
+        applyFiltersBtn.addEventListener('click', applyFilters);
+        clearFiltersBtn.addEventListener('click', clearFilters);
+
+        movapplyFiltersBtn.addEventListener('click', applyFiltersMov);
+        movclearFiltersBtn.addEventListener('click', clearFiltersMov);
+    });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+        function checkResults() {
+
+            var cards = document.querySelectorAll('.Inmuebles-Card-Subcontainer .card');
+            var noResultsDiv = document.getElementById('no-results');
+
+            var visibleCardsCount = Array.from(cards).filter(card => {
+
+                return window.getComputedStyle(card).display !== 'none' &&
+                    window.getComputedStyle(card).visibility !== 'hidden' &&
+                    window.getComputedStyle(card).opacity !== '0';
+            }).length;
+
+            if (visibleCardsCount === 0) {
+
+                noResultsDiv.style.display = 'flex';
+            } else {
+                noResultsDiv.style.display = 'none';
+            }
+        }
+
+        checkResults();
+
+        document.getElementById('apply-filters').addEventListener('click', checkResults);
+        document.getElementById('clear-filters').addEventListener('click', checkResults);
+        document.getElementById('apply-filters-mov').addEventListener('click', checkResults);
+        document.getElementById('clear-filters-mov').addEventListener('click', checkResults);
+    });
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+
+            // Recuperar la constante booleana del localStorage
+            const filterApply = localStorage.getItem('filter_apply') === 'true';
+
+            // Verificar el valor de la constante
+            if (filterApply) {
+                const urlParams = new URLSearchParams(window.location.search);
+                const ubicación = urlParams.get('ubicación');
+                const tipo_venta = urlParams.get('tipo_venta');
+                const tipo_propiedad = urlParams.get('tipo_propiedad');
+                const habitaciones = urlParams.get('habitaciones');
+                const precio = urlParams.get('precio');
+
+                const cards = document.querySelectorAll('.card');
+                cards.forEach(card => {
+                    const cardUbicacion = card.getAttribute('ubicacion-index');
+                    const cardVenta = card.getAttribute('venta-index');
+                    const cardPropiedad = card.getAttribute('propiedad-index');
+                    const cardHabitaciones = card.getAttribute('habitaciones-index');
+                    const cardPrecio = card.getAttribute('precio-index');
+
+                    const matches = 
+                                    (ubicación === 'ubicación-def' || cardUbicacion === ubicación) &&
+                                    (tipo_venta === 'sale-def' || cardVenta === tipo_venta) &&
+                                    (tipo_propiedad === 'tipo-def' || cardPropiedad === tipo_propiedad) &&
+                                    (habitaciones === 'hab-def' || cardHabitaciones === habitaciones) &&
+                                    (precio === 'val-def' || cardPrecio === precio);
+
+                    card.style.display = matches ? 'flex' : 'none';
+                });
+
+                // Verifica si hay tarjetas visibles y muestra/oculta el div de no resultados
+                function checkResults() {
+                    const visibleCardsCount = Array.from(cards).filter(card => {
+                        return window.getComputedStyle(card).display !== 'none';
+                    }).length;
+
+                    const noResultsDiv = document.getElementById('no-results');
+                    if (visibleCardsCount === 0) {
+                        noResultsDiv.style.display = 'flex';
+                    } else {
+                        noResultsDiv.style.display = 'none';
+                    }
+                }
+
+                // Llama a checkResults después de aplicar los filtros
+                checkResults();
+            } else {
+                console.log("El botón no fue presionado.");
+            }
+        });
+            
+    </script>
+</body>
+</html>
